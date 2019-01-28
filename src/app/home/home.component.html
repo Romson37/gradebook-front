@@ -1,0 +1,23 @@
+<div *ngIf="info.token; else loggedOut">
+  <mat-card class="loggedIn-card">
+      <mat-card-title>{{'HOME_PAGE.YOUR_INFO' | translate}}</mat-card-title>
+  <mat-card-content>
+  <p>
+    <strong>{{'LOGIN_PAGE.USERNAME' | translate}}:</strong> {{info.username}}<br/>
+    <strong>{{'HOME_PAGE.ROLES_INFO' | translate}}:</strong> {{info.authorities}}<br />
+  </p>
+</mat-card-content>
+</mat-card>
+</div>
+
+<div>
+<ng-template #loggedOut>
+
+    <mat-card class="Please-LogIn-card">
+        <mat-card-header>
+          <div mat-card-avatar class="login-image"></div>
+          <mat-card-title>Please Login</mat-card-title>
+        </mat-card-header>
+      </mat-card>
+    </ng-template>
+</div>

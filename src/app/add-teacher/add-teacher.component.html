@@ -1,0 +1,52 @@
+<mat-card class="add-teacher-matcard">
+  <mat-card-content>
+    <div class="form-group">
+      <label for="username">{{'ADD_TEACHER.NAME' | translate}}</label>
+      <input type="text"  class="form-control" name="studentName" required="required" [(ngModel)]="name">
+    </div>
+    <div class="form-group">
+      <label for="surname">{{'ADD_TEACHER.SURNAME' | translate}}</label>
+      <input type="text" class="form-control"  name="surname" required="required" [(ngModel)]="surname"/>
+    </div>
+    <div class="form-group">
+      <label for="email">{{'ADD_TEACHER.EMAIL' | translate}}</label>
+      <input type="text" class="form-control"  name="email" required="required"  [(ngModel)]="email"/>
+    </div>
+    <div class="form-group">
+        <label for="subject">{{'ADD_TEACHER.SUBJECT' | translate}}</label>
+        <input type="text" class="form-control"  name="subject" required="required"  [(ngModel)]="subject"/>
+      </div>
+    <div class="form-group">
+      <button mat-raised-button (click)="addTeacherToList(username)">{{'ADD_TEACHER.ADD_BUTTON' | translate}}</button>
+    </div>
+  </mat-card-content>
+  </mat-card>
+
+
+
+
+
+
+
+
+  <!-- <div class="row col-sm-6" style="max-width:350px;">
+      <div class="form-group">
+        <label for="username">{{'ADD_TEACHER.NAME' | translate}}</label>
+        <input type="text"  class="form-control" name="studentName" required="required" [(ngModel)]="name">
+      </div>
+      <div class="form-group">
+        <label for="surname">{{'ADD_TEACHER.SURNAME' | translate}}</label>
+        <input type="text" class="form-control"  name="surname" required="required" [(ngModel)]="surname"/>
+      </div>
+      <div class="form-group">
+        <label for="email">{{'ADD_TEACHER.EMAIL' | translate}}</label>
+        <input type="text" class="form-control"  name="email" required="required"  [(ngModel)]="email"/>
+      </div>
+      <div class="form-group">
+          <label for="subject">{{'ADD_TEACHER.SUBJECT' | translate}}</label>
+          <input type="text" class="form-control"  name="subject" required="required"  [(ngModel)]="subject"/>
+        </div>
+      <div class="form-group">
+        <button mat-raised-button (click)="addTeacherToList(username)">{{'ADD_TEACHER.ADD_BUTTON' | translate}}</button>
+      </div>
+    </div> -->

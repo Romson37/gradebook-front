@@ -1,0 +1,38 @@
+
+ <mat-card class="manage-group">
+    
+    <mat-card-title>{{'MANAGE_GROUPS.GROUP_DETAILS' | translate}}</mat-card-title>
+  <!-- <div class="container-fluid">
+      <br />
+      <router-outlet></router-outlet>
+    </div> -->
+    <mat-card-content>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th class="hidden">Id</th>
+        <th>{{'MANAGE_GROUPS.GROUP' | translate}}</th>
+        <th>{{'MANAGE_GROUPS.CHOOSE_TEACHER' | translate}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let group of groups">
+        <td class="hidden"></td>
+        <td>{{group.groupId}}</td>
+        <td>
+            <mat-form-field>
+          <select matNativeControl (ngModel)="selectedTeacher" (change)="onChange($event)">
+            <option *ngFor="let teacher of teachers"> {{teacher.teachersName}}</option>
+          </select>
+          </mat-form-field>
+        </td>
+        <td>
+          <button mat-raised-button (click)="saveTeacherToGroup(group.groupId)">{{'MANAGE_GROUPS.SAVE_BUTTON' |
+            translate}}</button>
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+</mat-card-content>
+</mat-card>

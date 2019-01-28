@@ -1,0 +1,23 @@
+<mat-card class="add-student-matcard">
+  <mat-card-content>
+    <div class="form-group">
+      <label for="username">{{'ADD_STUDENT.NAME' | translate}}</label>
+      <input type="text"  class="form-control" name="studentName" required="required" [(ngModel)]="name">
+    </div>
+    <div class="form-group">
+      <label for="surname">{{'ADD_STUDENT.SURNAME' | translate}}</label>
+      <input type="text" class="form-control"  name="surname" required="required" [(ngModel)]="surname"/>
+    </div>
+    <div class="form-group">
+      <label for="email">{{'ADD_STUDENT.EMAIL' | translate}}</label>
+      <input type="text" class="form-control"  name="email" required="required"  [(ngModel)]="email"/>
+    </div>
+    <div class="form-group">
+      <label for="group">{{'ADD_STUDENT.GROUP' | translate}}</label>
+      <input type="text" class="form-control"  name="group" required="required" [(ngModel)]="group_"/>
+    </div>
+    <div class="form-group">
+      <button mat-raised-button (click)="addStudentToList(username)">{{'ADD_STUDENT.ADD_BUTTON' | translate}}</button>
+    </div>
+  </mat-card-content>
+</mat-card>

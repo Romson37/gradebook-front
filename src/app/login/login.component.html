@@ -1,0 +1,80 @@
+
+<div *ngIf="isLoggedIn; else loggedOut">
+  <mat-card class="loggedIn-card">
+    <mat-card-title>{{'HOME_PAGE.YOUR_INFO' | translate}}</mat-card-title>
+<mat-card-content>
+<p>
+  <strong>{{'LOGIN_PAGE.USERNAME' | translate}}:</strong> {{info.username}}<br/>
+  <strong>{{'HOME_PAGE.ROLES_INFO' | translate}}:</strong> {{info.authorities}}<br />
+</p>
+</mat-card-content>
+</mat-card>
+</div>
+
+<div>
+<ng-template #loggedOut>
+
+  <mat-card class="Please-LogIn-card">
+      <mat-card-header>
+        <div mat-card-avatar class="login-image"></div>
+        <mat-card-title>Please Login</mat-card-title>
+      </mat-card-header>
+    </mat-card>
+  </ng-template>
+
+</div>
+<div class= "main-div" ng-controller="AppCtrl" ng-cloak="" ng-app="MyApp" layout-fill layout="column" layout-align="center">
+    <div flex="50" layout="row" layout-align="center">
+<ng-template #loggedOut>
+
+  <mat-card flex="50" class="example-card">
+    <mat-card-header>
+      <mat-card-title>{{'LOGIN_PAGE.LOGIN_PAGE_TITLE' | translate}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      
+        <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+   <table cellspacing="0">
+     <tr>
+       <td>            
+                <mat-form-field class="form-group">
+                  <label for="username"></label>
+                  <input matInput placeholder="Username" class="form-control" name="username" [(ngModel)]="form.username"
+                    #username="ngModel" required />
+                </mat-form-field>
+  
+        <div *ngIf="f.submitted && username.invalid">
+          <div *ngIf="username.errors.required">{{'LOGIN_PAGE.USERNAME_ERROR' | translate}}</div>
+        </div>
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        <mat-form-field class="form-group">
+          <label for="password"></label>
+          <input flex="50" matInput placeholder="Password" type="password" class="form-control" name="password" [(ngModel)]="form.password"
+            #password="ngModel"/>
+        </mat-form-field>
+        <div *ngIf="f.submitted && password.invalid">
+          <div *ngIf="password.errors.required">{{'LOGIN_PAGE.PASSWORD_ERROR' | translate}}</div>
+        </div>
+    </td>
+    </tr>
+    </table>
+   
+      <div class="form-group">
+        <button mat-raised-button color="primary" class="btn btn-primary">{{'LOGIN_PAGE.LOG_IN' | translate}}</button>
+        <div *ngIf="f.submitted && isLoginFailed" class="alert alert-danger">
+          {{'LOGIN_PAGE.LOGIN_ERROR' | translate}}
+        </div>
+      </div>
+      </form>
+      <hr />
+      <p> {{'LOGIN_PAGE.NEW_ACC_QUESTION' | translate}}</p>
+      <a href="signup" class="btn btn-success">{{'LOGIN_PAGE.SIGN_UP' | translate}}</a>
+  
+    </mat-card-content>
+  </mat-card>
+
+</ng-template>

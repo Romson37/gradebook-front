@@ -1,0 +1,62 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav 
+  #drawer 
+  class="sidenav" 
+  fixedInViewport="true"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="!(isHandset$ | async)">
+    <mat-toolbar >Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="auth/login">{{'SIDE_MENU.LOG_IN' | translate}}</a>
+      <li *ngIf="authority === 'admin'" class="nav-item">
+      <a mat-list-item href="admin">{{'SIDE_MENU.ADMIN_PANEL' | translate}}</a>
+      </li>
+      <li *ngIf="authority === 'admin'" class="nav-item">
+          <a mat-list-item href="manage-groups">{{'SIDE_MENU.ADDING_TEACHERS_TO_GROUPS' | translate}}</a>
+          </li>
+      <li *ngIf="authority === 'teacher'" class="nav-item">
+      <a mat-list-item href="teacher">{{'SIDE_MENU.TEACHER_PANEL' | translate}}</a>
+      </li>
+      <li *ngIf="authority === 'student'" class="nav-item">
+      <a mat-list-item href="student">{{'SIDE_MENU.STUDENT_PANEL' | translate}}</a>
+      </li>
+      <li *ngIf="authority === 'user'" class="nav-item">
+          <a mat-list-item href="user">{{'SIDE_MENU.USER_PANEL' | translate}}</a>
+          </li>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div [class.alternative]="otherTheme">
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>Gradebook</span>
+      <span class="example-fill-remaining-space"></span>
+      <span>
+        <button (click)="useLanguage('en')" mat-button><img src="assets\pics\en.png"></button>
+      </span>
+      <span>
+      <button (click)="useLanguage('pl')" mat-button><img src="assets\pics\pl.png"></button>
+      </span>
+      <span >
+        <section class= 'theme-selection'>
+          <button (click)="changeTheme()" mat-button >{{'TOOLBAR.CHANGE_THEME' | translate}}</button>
+      </section>
+    </span>
+      <span>
+      <button mat-button 
+      (click)="logout()">{{'TOOLBAR.LOG_OUT' | translate}}
+    </button>
+  </span>
+    </mat-toolbar>
+  </div>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

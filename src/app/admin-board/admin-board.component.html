@@ -1,0 +1,27 @@
+<mat-card class="admin-board">
+  <mat-card-title> {{'ADMIN_BOARD.USER_DETAILS' | translate}}</mat-card-title>
+    <mat-card-content>
+  <div class="container-fluid">
+    <br />
+    <router-outlet></router-outlet>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th class="hidden">Id</th>
+        <th>{{'ADMIN_BOARD.USERNAME' | translate}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td class="hidden"></td>
+        <td>{{user.username}}</td>
+        <td><button mat-raised-button (click)="addTeacher(user.username)"> {{'ADMIN_BOARD.ADD_TO_TEACHER_LIST' |
+            translate}}</button></td>
+        <td><button mat-raised-button (click)="addStudent(user.username)"> {{'ADMIN_BOARD.ADD_TO_STUDENT_LIST' |
+            translate}}</button></td>
+      </tr>
+    </tbody>
+  </table>
+  </mat-card-content>
+</mat-card>

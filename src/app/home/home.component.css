@@ -1,0 +1,22 @@
+
+  .login-image {
+    background-image: url('http://societyoftouristguides.org.sg//assets/img/admin.png');
+    background-size: cover;
+  }
+  .center{
+    width: 75%;
+    margin: 10px auto;
+    
+  }
+  
+  .main-div{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Please-LogIn-card {
+      width: 100%;
+      border: 3px ;
+    
+  }

@@ -1,0 +1,40 @@
+<div>
+<mat-card>
+    <mat-card-title> Group Details </mat-card-title>
+    <mat-card-content>
+      <table mdbTable class="table table-striped">
+        <thead>
+          <th class="hidden">Id</th>
+          <th>{{'STUDENT_LIST.GROUP' | translate}} </th>
+          <th>{{'STUDENT_LIST.NAME' | translate}}</th>
+          <th>{{'STUDENT_LIST.MAIL' | translate}}</th>
+          <th>{{'STUDENT_LIST.MARKS' | translate}}</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let stud of studentobj">
+            <td>{{stud.student.studentsName}}</td>
+            <td>{{stud.student.studentsSurname}}</td>
+            <td>{{stud.student.studentsEmail}}</td>
+            <td>
+              <table>
+                <tr>
+                  <td class="text-center width-40 font-weight-bold" *ngFor="let mark of stud.marks">{{mark.markValue}}&nbsp;&nbsp;</td>
+                </tr>
+              </table>
+            </td>
+            <td>
+              <div class="form-group">
+                <input size="4" type="text" class="form-control" name="markValue" required="required" [(ngModel)]="markValue" />
+              </div>
+            </td>
+            <td>
+              <div class="form-group">
+                <button mat-raised-button (click)="addMarkToUser(stud.student.studentId)">Add</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </mat-card-content>
+</mat-card>
+</div>

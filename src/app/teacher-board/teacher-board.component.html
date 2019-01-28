@@ -1,0 +1,20 @@
+<div>
+  <mat-card>
+    <mat-card-title> {{'TEACHER_BOARD.TEACHER_DETAILS' | translate}} </mat-card-title>
+    <mat-card-content>
+      <table mdbTable class="table table-striped">
+        <thead>
+          <th class="hidden">Id</th>
+          <th>{{'TEACHER_BOARD.GROUP' | translate}}</th>
+          <th>N{{'TEACHER_BOARD.NAME' | translate}}ame</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let group of groups">
+            <td>{{group?.groupId}}</td>
+            <td><button mat-raised-button (click)="showStudents(group)">Show students</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </mat-card-content>
+  </mat-card>
+</div>

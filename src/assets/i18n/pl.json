@@ -1,0 +1,81 @@
+{
+    "LOGIN_PAGE" : {
+        "LOGIN_PAGE_TITLE": "Logowanie",
+        "LOG_IN": "Zaluguj",
+        "USERNAME": "Nazwa użytkownika",
+        "PASSWORD": "Hasło",
+        "NEW_ACC_QUESTION": "Nie masz jeszcze konta?",
+        "SIGN_UP": "Zarejestruj",
+        "USERNAME_ERROR": "Nazwa użytkownika jest obowiązkowym polem",
+        "PASSWORD_ERROR": "Hasło jest obowiązkowym polem",
+        "LOGIN_ERROR": "Logowanie nie powiodło się, spróbuj jeszcze raz"
+
+    },
+    "HOME_PAGE": {
+        "YOUR_INFO": "Zalogowany jako",
+        "ROLES_INFO": "Nadane prawa"
+    },
+    "TOOLBAR": {
+        "CHANGE_THEME": "Zmień motyw",
+        "LOG_OUT": "Wyloguj"
+    },
+    "SIDE_MENU": {
+        "LOG_IN": "Zaloguj",
+        "ADMIN_PANEL": "Panel administratora",
+        "ADDING_TEACHERS_TO_GROUPS": "Dodawanie grupy do nauczyciela",
+        "STUDENT_PANEL": "Panel studenta",
+        "TEACHER_PANEL": "Panel nauczyciela",
+        "USER_PANEL": "Panel użytkownika"
+    },
+    "REGISTRATION": {
+        "REGISTRATION_SUCCESS_ALERT": "Rejestracja przebiegła pomyślnie. Możesz zalogować się do serwisu",
+        "USERNAME": "Nazwa użytkownika",
+        "PASSWORD": "Hasło",
+        "USERNAME_ALERT": "Nazwa użytkownika jest polem obowiązkowym",
+        "PASSWORD_ALERT": "Hasło jest polem obowiązkowym",
+        "REGISTER_BUTTON": "Zarejestruj",
+        "REGISTRATION_FAIL_ALERT": "Podczas rejestracji wystąpił błąd. Spróbuj ponownie."
+    },
+    "STUDENT_PANEL": {
+        "MARK": "Oceny",
+        "SUBJECT": "Przedmiot",
+        "TEACHER": "Nauczyciel"
+     },
+     "STUDENT_LIST": {
+         "GROUP": "Grupa",
+         "NAME": "Imię",
+         "MAIL": "Mail",
+         "MARKS": "Oceny"
+      },
+      "TEACHER_BOARD": {
+          "TEACHER_DETAILS": "Szczegóły nauczyciela",
+          "GROUP": "Grupa",
+          "NAME": "Imię"
+       },
+       "ADD_STUDENT": {
+           "NAME": "Imię",
+           "SURNAME": "Nazwisko",
+           "EMAIL": "Mail",
+           "GROUP": "Grupa",
+           "ADD_BUTTON": "Dodaj"
+        },
+        "ADD_TEACHER": {
+           "NAME": "Imię",
+           "SURNAME": "Nazwisko",
+           "EMAIL": "Mail",
+           "SUBJECT": "Przedmiot",
+           "ADD_BUTTON": "Dodaj"
+         },
+         "ADMIN_BOARD": {
+             "USER_DETAILS": "Szczegóły użytkowników",
+             "USERNAME": "Nazwa użytkownika",
+             "ADD_TO_TEACHER_LIST": "Dodaj do listy nauczycieli",
+             "ADD_TO_STUDENT_LIST": "Dodaj do listy uczniów"
+          },
+          "MANAGE_GROUPS": {
+              "GROUP_DETAILS": "Szczegóły grup",
+              "GROUP": "Grupa",
+              "CHOOSE_TEACHER": "Wybierz nauczyciela",
+              "SAVE_BUTTON": "Zapisz"
+           }
+}
